@@ -9,6 +9,7 @@ body, html {
     justify-content: space-between;
     margin: auto;
     height: 40px;
+    max-width: 100vw;
 }
 
 #leftGuys, #rightGuys {
@@ -54,20 +55,28 @@ h1 {
 
 #searchBar {
     height: 30px;
-    width: 75%;
+    width: 70%;
+    margin-left: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
     border: none;
     border-bottom: solid 1px;
     border-color: blue;
 }
 
 #searchButton {
+    display: flex;
     cursor: pointer;
     color: white;
+    margin-right: 10px;
     background-color: blue;
     border: none;
     height: 30px;
-
+    width: 30px;
+    align-items: center;
+    justify-content: center;
 }
+
 
 #savingLink {
     color: white;
@@ -83,20 +92,46 @@ h1 {
 #thirdNav {
     display: flex;
     flex-direction: column;
-    width: 17.5vw;
+    width: 225px;
     padding-left: 5px;
+    flex: 0 0 auto;
 }
 
 #fourthNav {
-    margin-left: 5px;
+    margin: 5px;
     display: grid;
+    gap: 5px;
     grid-template-columns: repeat(4,25%);
-    width: 80vw;
-    height: 100vw;
+    width: 1000px;
+    height: 10px;
 }
 
 #midScreen{
     display: flex;
+}
+
+.imageContainer {
+    position: relative;
+    display: inline-block; /* makes container same size as the image */
+    
+}
+
+.imageContainer img {
+    display: block; /* removes small gap under images */
+}
+
+.imageText {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    height: 200px;
+
+    color: black;
+    background:white; /* semi-transparent dark background */
+    box-sizing: border-box;
 }
 
 .leftMenu {
@@ -120,23 +155,18 @@ h1 {
 #addToCart {
     display: flex;
     justify-content: space-between;
+    background-color: blue;
+    align-items: center;
+}
+
+h4 {
     margin: 5px;
 }
 
 #cartButton {
     cursor: pointer;
-    height: 50px;
-    width: 50px;
+    height: 45px;
+    width: 45px;
     border-radius: 100px;
-}
-
-#testFourthNav {
-}
-
-figure {
-    margin: 0;
-}
-
-p {
     margin: 5px;
 }
